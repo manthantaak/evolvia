@@ -61,10 +61,9 @@ const AboutPage = () => {
             
             <div className="space-y-4 mb-8">
               {[
-                'Founded in 2018 with a vision to revolutionize digital presence',
+                'Founded in 2025 with a vision to revolutionize digital presence',
                 'Specialized in combining web development with strategic marketing',
-                'Helped over 200+ brands increase their digital presence',
-                'Award-winning team of marketers, designers, and developers'
+                'Trustable team of marketers, designers, and developers'
               ].map((item, index) => (
                 <div key={index} className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
@@ -100,7 +99,7 @@ const AboutPage = () => {
                     <Award className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium">Award Winning</p>
+                    <p className="text-sm font-medium">Trustable</p>
                     <p className="text-xl font-bold">Agency</p>
                   </div>
                 </div>

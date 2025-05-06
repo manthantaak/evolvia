@@ -188,13 +188,8 @@ const ContactPage = () => {
                   transition={{ duration: 0.5, delay: 0.1 }}
                   className="flex items-start"
                 >
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mr-4 flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-medium mb-1">Our Location</h3>
-                    <p className="text-foreground/70">123 Innovation Drive, Digital City, DC 10101</p>
-                  </div>
+                  
+                  
                 </motion.div>
                 
                 <motion.div
@@ -208,8 +203,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">Email Us</h3>
-                    <p className="text-foreground/70">info@digitalsphere.com</p>
-                    <p className="text-foreground/70">support@digitalsphere.com</p>
+                    <p className="text-foreground/70">hello.evolvia@gmail.com</p>
                   </div>
                 </motion.div>
                 
@@ -224,8 +218,9 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">Call Us</h3>
-                    <p className="text-foreground/70">+1 (555) 123-4567</p>
-                    <p className="text-foreground/70">+1 (555) 987-6543</p>
+                    <p className="text-foreground/70">+918600345687</p>
+                    <p className="text-foreground/70">+919021969221</p>
+                    
                   </div>
                 </motion.div>
                 
@@ -240,8 +235,8 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">Business Hours</h3>
-                    <p className="text-foreground/70">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <p className="text-foreground/70">Saturday: 10:00 AM - 2:00 PM</p>
+                    <p className="text-foreground/70">Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                    
                   </div>
                 </motion.div>
               </div>

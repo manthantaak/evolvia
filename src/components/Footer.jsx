@@ -136,13 +136,15 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 text-primary mt-0.5" />
                 <span className="text-sm text-foreground/70">
-                  123 Innovation Drive, Digital City, DC 10101
+                  Old Viva college road virar (W)
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="mr-2 text-primary" />
                 <span className="text-sm text-foreground/70">
-                  +1 (555) 123-4567
+                +918600345687
+
+                 +919021969221
                 </span>
               </li>
               <li className="flex items-center">

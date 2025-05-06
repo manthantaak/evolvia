@@ -107,8 +107,8 @@ const HeroSection = () => {
                     <TrendingUp className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium">Conversion Rate</p>
-                    <p className="text-xl font-bold">+187%</p>
+                    <p className="text-sm font-medium">Fastest Growth Rate  Rate</p>
+                    <p className="text-xl font-bold">100%</p>
                   </div>
                 </div>
               </motion.div>
@@ -124,8 +124,8 @@ const HeroSection = () => {
                     <BarChart className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium">Client Growth</p>
-                    <p className="text-xl font-bold">+250%</p>
+                    <p className="text-sm font-medium">service</p>
+                    <p className="text-xl font-bold">24/7</p>
                   </div>
                 </div>
               </motion.div>
