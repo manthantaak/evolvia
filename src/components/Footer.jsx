@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -41,15 +40,16 @@ const Footer = () => {
               <a href="#" className="text-foreground/70 hover:text-primary transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-foreground/70 hover:text-primary transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-foreground/70 hover:text-primary transition-colors">
+              
+              <a
+                href="https://www.instagram.com/evolvia.agency?igsh=MWJranhlamNqYXk4Mg=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground/70 hover:text-primary transition-colors"
+              >
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-foreground/70 hover:text-primary transition-colors">
-                <Linkedin size={20} />
-              </a>
+              
             </motion.div>
           </div>
           
@@ -142,9 +142,23 @@ const Footer = () => {
               <li className="flex items-center">
                 <Phone size={18} className="mr-2 text-primary" />
                 <span className="text-sm text-foreground/70">
-                +918600345687
-
-                 +919021969221
+                  <a
+                    href="https://wa.me/918600345687"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    +918600345687
+                  </a>
+                  <br />
+                  <a
+                    href="https://wa.me/919021969221"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    +919021969221
+                  </a>
                 </span>
               </li>
               <li className="flex items-center">

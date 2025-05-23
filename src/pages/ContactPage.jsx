@@ -1,9 +1,9 @@
-
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Mail, Phone, MapPin, Send, MessageSquare, Clock } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
+import emailjs from 'emailjs-com';
 
 const ContactPage = () => {
   const { toast } = useToast();
@@ -30,24 +30,41 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+
+    emailjs.send(
+      'service_XXXXXXXX', // replace with your EmailJS service ID
+      'template_XXXXXXXX', // replace with your EmailJS template ID
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      },
+      'user_XXXXXXXX' // replace with your EmailJS public key (user ID)
+    )
+    .then(() => {
       setIsSubmitting(false);
       toast({
         title: "Message sent successfully!",
         description: "We'll get back to you as soon as possible.",
         duration: 5000,
       });
-      
-      // Reset form
       setFormData({
         name: '',
         email: '',
         subject: '',
         message: '',
       });
-    }, 1500);
+    })
+    .catch(() => {
+      setIsSubmitting(false);
+      toast({
+        title: "Failed to send message.",
+        description: "Please try again later.",
+        duration: 5000,
+        variant: "destructive",
+      });
+    });
   };
 
   return (
@@ -218,9 +235,22 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">Call Us</h3>
-                    <p className="text-foreground/70">+918600345687</p>
-                    <p className="text-foreground/70">+919021969221</p>
-                    
+                    <a
+                      href="https://wa.me/918600345687"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-foreground/70 hover:underline block"
+                    >
+                      +918600345687
+                    </a>
+                    <a
+                      href="https://wa.me/919021969221"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-foreground/70 hover:underline block"
+                    >
+                      +919021969221
+                    </a>
                   </div>
                 </motion.div>
                 

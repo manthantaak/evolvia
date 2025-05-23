@@ -6,28 +6,29 @@ import { CheckCircle, Award, Users, Calendar, Briefcase } from 'lucide-react';
 
 const teamMembers = [
   {
-    name: 'Alex Morgan',
-    position: 'Founder & CEO',
+    name: 'Manthan Taak',
+    position: 'web developer',
     image: 'professional-male-ceo-portrait',
-    bio: 'With over 15 years of experience in digital marketing and web technologies, Alex founded DigitalSphere to help businesses leverage cutting-edge digital solutions.'
-  },
+    bio: ' Creative and detail-oriented web developer with a passion for building responsive, user-friendly websites and applications.'
+  } ,
+
   {
-    name: 'Sophia Chen',
-    position: 'Head of Web Development',
+    name: 'Anuj Bohra',
+    position: 'Digital Marketing Strategist',
     image: 'asian-female-creative-director-portrait',
-    bio: 'Sophia leads our web development team, bringing brands to life through stunning and functional websites. Her background in both design and technology drives our innovative approach.'
+    bio: 'Results-driven digital marketing specialist skilled in crafting data-backed strategies to boost online visibility and engagement'
   },
   {
-    name: 'Marcus Johnson',
+    name: 'sarvesh',
     position: 'Digital Marketing Strategist',
     image: 'african-american-male-marketing-strategist',
-    bio: 'Marcus develops data-driven marketing strategies that deliver measurable results. His analytical approach ensures our clients achieve maximum ROI on their marketing investments.'
+    bio: 'sarvesh develops data-driven marketing strategies that deliver measurable results. His analytical approach ensures our clients achieve maximum ROI on their marketing investments.'
   },
   {
-    name: 'Olivia Rodriguez',
+    name: 'Hardik Dalvi',
     position: 'Creative Director',
     image: 'latina-female-creative-director-portrait',
-    bio: 'Olivia oversees all creative aspects of our projects, ensuring that every visual element aligns with our clients\' brand identity and marketing objectives.'
+    bio: ' creative aspects of our projects, ensuring that every visual element aligns with our clients\' brand identity and marketing objectives.'
   }
 ];
 
