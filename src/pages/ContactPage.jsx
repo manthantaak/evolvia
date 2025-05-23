@@ -3,10 +3,15 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Mail, Phone, MapPin, Send, MessageSquare, Clock } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser'; // updated import
+
+const SERVICE_ID = 'service_XXXXXXXX'; // replace with your EmailJS service ID
+const TEMPLATE_ID = 'template_123456'; // replace with your EmailJS template ID
+const PUBLIC_KEY = 'lRJ6S6B4O1y9p3B96'; // replace with your EmailJS public key (user ID)
 
 const ContactPage = () => {
   const { toast } = useToast();
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,6 +22,7 @@ const ContactPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    emailjs.init(PUBLIC_KEY); // initialize EmailJS
   }, []);
 
   const handleChange = (e) => {
@@ -32,15 +38,16 @@ const ContactPage = () => {
     setIsSubmitting(true);
 
     emailjs.send(
-      'service_XXXXXXXX', // replace with your EmailJS service ID
-      'template_XXXXXXXX', // replace with your EmailJS template ID
+      SERVICE_ID,
+      TEMPLATE_ID,
       {
         from_name: formData.name,
         from_email: formData.email,
+        to_email: 'hello.evolvia@gmail.com', // Make sure your EmailJS template uses this variable as the recipient
         subject: formData.subject,
         message: formData.message,
-      },
-      'user_XXXXXXXX' // replace with your EmailJS public key (user ID)
+      }
+      // PUBLIC_KEY // do not pass public key here, already initialized
     )
     .then(() => {
       setIsSubmitting(false);
@@ -56,8 +63,10 @@ const ContactPage = () => {
         message: '',
       });
     })
-    .catch(() => {
+    .catch((error) => {
       setIsSubmitting(false);
+      // Log the error for debugging
+      console.error('EmailJS error:', error);
       toast({
         title: "Failed to send message.",
         description: "Please try again later.",
