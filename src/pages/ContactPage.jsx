@@ -245,20 +245,20 @@ const ContactPage = () => {
                   <div>
                     <h3 className="text-lg font-medium mb-1">Call Us</h3>
                     <a
-                      href="https://wa.me/918600345687"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-foreground/70 hover:underline block"
-                    >
-                      +918600345687
-                    </a>
-                    <a
                       href="https://wa.me/919021969221"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-foreground/70 hover:underline block"
                     >
                       +919021969221
+                    </a>
+                    <a
+                      href="https://wa.me/918600345687"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-foreground/70 hover:underline block"
+                    >
+                      +918600345687
                     </a>
                   </div>
                 </motion.div>
@@ -293,17 +293,23 @@ const ContactPage = () => {
               </p>
               
               <div className="flex space-x-4">
-                {['facebook', 'twitter', 'instagram', 'linkedin'].map((platform, index) => (
+                {[
+                  { platform: 'facebook', url: 'https://www.facebook.com/share/1EAPaRaYVm/', icon: '/facebook.png' },
+                  { platform: 'instagram', url: 'https://www.instagram.com/evolvia.agency?igsh=eGhrcjRpbzI4dWR0', icon: '/instagram.png' }
+                ].map(({ platform, url, icon }) => (
                   <a
                     key={platform}
-                    href="#"
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary/40 transition-colors"
                     aria-label={`Follow us on ${platform}`}
                   >
-                    <img  
-                      alt={`${platform} icon`} 
-                      className="w-6 h-6"
-                     src="https://images.unsplash.com/photo-1688539023764-c8282edc1502" />
+                    <img
+                      src={icon}
+                      alt={`${platform} icon`}
+                      className="w-6 h-6 object-contain"
+                    />
                   </a>
                 ))}
               </div>

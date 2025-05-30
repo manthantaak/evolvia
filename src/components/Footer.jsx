@@ -143,21 +143,21 @@ const Footer = () => {
                 <Phone size={18} className="mr-2 text-primary" />
                 <span className="text-sm text-foreground/70">
                   <a
-                    href="https://wa.me/918600345687"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline"
-                  >
-                    +918600345687
-                  </a>
-                  <br />
-                  <a
                     href="https://wa.me/919021969221"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline"
                   >
                     +919021969221
+                  </a>
+                  <br />
+                  <a
+                    href="https://wa.me/918600345687"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    +918600345687
                   </a>
                 </span>
               </li>

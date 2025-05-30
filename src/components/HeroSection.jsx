@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, BarChart, Zap, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -50,12 +50,16 @@ const HeroSection = () => {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button size="lg" className="gradient-bg">
-                Get Started <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button size="lg" variant="outline">
-                Our Services
-              </Button>
+              <Link to="/contact">
+                <Button size="lg" className="gradient-bg">
+                  Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link to="/services">
+                <Button size="lg" variant="outline">
+                  Our Services
+                </Button>
+              </Link>
             </motion.div>
             
             <motion.div
