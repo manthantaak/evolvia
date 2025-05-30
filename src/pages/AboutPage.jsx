@@ -19,17 +19,12 @@ const teamMembers = [
     bio: 'Results-driven digital marketing specialist skilled in crafting data-backed strategies to boost online visibility and engagement'
   },
   {
-    name: 'sarvesh',
+    name: 'sarvesh Patil',
     position: 'Digital Marketing Strategist',
     image: 'african-american-male-marketing-strategist',
     bio: 'sarvesh develops data-driven marketing strategies that deliver measurable results. His analytical approach ensures our clients achieve maximum ROI on their marketing investments.'
   },
-  {
-    name: 'Hardik Dalvi',
-    position: 'Creative Director',
-    image: 'latina-female-creative-director-portrait',
-    bio: ' creative aspects of our projects, ensuring that every visual element aligns with our clients\' brand identity and marketing objectives.'
-  }
+  
 ];
 
 const AboutPage = () => {
