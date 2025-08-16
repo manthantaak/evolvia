@@ -1,28 +1,20 @@
-
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { CheckCircle, Award, Users, Calendar, Briefcase } from 'lucide-react';
+import { CheckCircle, Award } from 'lucide-react';
 
 const teamMembers = [
   {
     name: 'Manthan Taak',
-    position: 'web developer',
-    image: 'professional-male-ceo-portrait',
-    bio: ' Creative and detail-oriented web developer with a passion for building responsive, user-friendly websites and applications.'
-  } ,
-
+    position: 'Web Developer',
+    image: '/my.jpg', // placeholder Unsplash
+    bio: 'Creative and detail-oriented web developer with a passion for building responsive, user-friendly websites and applications.'
+  },
   {
     name: 'Anuj Bohra',
     position: 'Digital Marketing Strategist',
-    image: 'asian-female-creative-director-portrait',
+    image: '/anuj.jpg', // ✅ from public folder
     bio: 'Results-driven digital marketing specialist skilled in crafting data-backed strategies to boost online visibility and engagement'
-  },
-  {
-    name: 'sarvesh Patil',
-    position: 'Digital Marketing Strategist',
-    image: 'african-american-male-marketing-strategist',
-    bio: 'sarvesh develops data-driven marketing strategies that deliver measurable results. His analytical approach ensures our clients achieve maximum ROI on their marketing investments.'
   },
   
 ];
@@ -54,7 +46,7 @@ const AboutPage = () => {
             <p className="text-lg text-foreground/70 mb-8">
               We're a team of digital marketing experts and web development specialists dedicated to transforming how brands connect with their audiences in the digital world.
             </p>
-            
+
             <div className="space-y-4 mb-8">
               {[
                 'Founded in 2025 with a vision to revolutionize digital presence',
@@ -67,10 +59,10 @@ const AboutPage = () => {
                 </div>
               ))}
             </div>
-            
+
             <Button className="gradient-bg">Our Services</Button>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -81,7 +73,8 @@ const AboutPage = () => {
                 <img  
                   alt="Evolvia team working together" 
                   className="w-full h-full object-cover"
-                 src="https://images.unsplash.com/photo-1675023112817-52b789fd2ef0" />
+                  src="https://images.unsplash.com/photo-1675023112817-52b789fd2ef0" 
+                />
               </div>
               
               <motion.div
@@ -103,9 +96,7 @@ const AboutPage = () => {
             </div>
           </motion.div>
         </div>
-        
-        
-        
+
         {/* Our Mission */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -122,7 +113,7 @@ const AboutPage = () => {
               We're on a mission to revolutionize digital presence through innovative web development and strategic marketing approaches that deliver measurable results.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -152,7 +143,7 @@ const AboutPage = () => {
             ))}
           </div>
         </motion.div>
-        
+
         {/* Team Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -183,7 +174,8 @@ const AboutPage = () => {
                   <img  
                     alt={`${member.name}, ${member.position}`} 
                     className="w-full h-full object-cover"
-                   src="https://images.unsplash.com/photo-1697256200022-f61abccad430" />
+                    src={member.image} 
+                  />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
